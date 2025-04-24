@@ -1,4 +1,6 @@
-const socket = io("https://kyle-server.onrender.com"); // Ganti dengan URL backend kamu
+const socket = io("https://kyle-server.onrender.com", {
+  transports: ["websocket"],
+});
 
 function sendMessage() {
   const input = document.getElementById("msg");
