@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real-Time Chat</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/scripts/socket.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center h-screen">
+  <div class="w-full max-w-xl">
+    <div id="chat" class="h-96 overflow-y-scroll border p-4 bg-gray-800 rounded mb-4"></div>
+    <div class="flex">
+      <input id="msg" type="text" class="flex-1 p-2 rounded-l bg-gray-700 text-white" placeholder="Ketik pesan..." />
+      <button onclick="sendMessage()" class="bg-blue-500 px-4 rounded-r">Kirim</button>
+    </div>
+  </div>
+</body>
+</html>
